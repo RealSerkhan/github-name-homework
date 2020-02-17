@@ -11,6 +11,7 @@ public class Homework2 {
     static int a = ran.nextInt(5);
     static int b = ran.nextInt(5);
 
+
     static String[][] arr = new String[5][5];
     public static void main(String[] args) {
         Scanner rs=new Scanner(System.in);
@@ -22,7 +23,7 @@ public class Homework2 {
             for (int j = 0; j < arr.length; j++) {
                 arr[i][j]="-";}}
 
-        while (a != x && b != y) {
+        while (a != x || b != y) {
 
             arr[x][y] = "*";
             For_loop();
