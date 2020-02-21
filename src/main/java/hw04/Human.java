@@ -47,7 +47,7 @@ public class Human {
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
                 ", IQ_level=" + IQ_level +
-                ", pet=" + pet.species+ "{nickname: " +pet.nickname + " Age: " +pet.age + ", Tricklevel: "+pet.tricklevel + ", Habits: "+pet.habits+
+                ", pet=" + pet.species+ "{nickname: " +pet.nickname + ", Age: " +pet.age + ", Tricklevel: "+pet.tricklevel + ", Habits: "+pet.habits+
                 ", mother=" + mother.name +
                 ", father=" + father.name +
 
