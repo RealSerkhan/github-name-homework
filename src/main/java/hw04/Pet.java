@@ -1,5 +1,7 @@
 package hw04;
 
+import java.util.Arrays;
+
 public class Pet {
      public String species;
      public String nickname;
@@ -7,7 +9,7 @@ public class Pet {
 
     public int tricklevel;
 
-    public String habits;
+    public String[] habits;
     public void eat(){
         System.out.println(" i am eating!");}
 
@@ -19,7 +21,7 @@ public class Pet {
         this.age=age;
 
         }
-    public Pet(String species,String nickname,int age,int tricklevel,String habits){
+    public Pet(String species,String nickname,int age,int tricklevel,String[]  habits){
         this.species=species;
         this.nickname=nickname;
         this.age=age;
@@ -44,7 +46,7 @@ public class Pet {
                 "nickname='" + nickname + '\'' +
                 ", age=" + age +
                 ", tricklevel=" + tricklevel +
-                ", habits='" + habits + '\'' +
+                ", habits='" + Arrays.toString(habits) + '\'' +
                 '}';
     }
 }

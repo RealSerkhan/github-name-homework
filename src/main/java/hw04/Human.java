@@ -1,11 +1,14 @@
 package hw04;
 
+import java.util.Arrays;
+
 public class Human {
 
     String name;
     String surname;
     int year;
     int IQ_level;
+    String schdule[];
     Pet pet;
     Human mother;
     Human father;
@@ -33,6 +36,7 @@ public class Human {
         this.pet = pet;
         this.mother = mother;
         this.father = father;
+        this.schdule=schdule;
     }
 
     //    (greetPet)("Hello, [the name of the pet]")
@@ -47,9 +51,10 @@ public class Human {
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
                 ", IQ_level=" + IQ_level +
-                ", pet=" + pet.species+ "{nickname: " +pet.nickname + ", Age: " +pet.age + ", Tricklevel: "+pet.tricklevel + ", Habits: "+pet.habits+
+                ", pet=" + pet.species+ "{nickname: " +pet.nickname + ", Age: " +pet.age + ", Tricklevel: "+pet.tricklevel + ", Habits: "+Arrays.toString(pet.habits)+
                 ", mother=" + mother.name +
                 ", father=" + father.name +
+                ", Schedule=" + Arrays.toString(schdule) +
 
                 '}';
     }
