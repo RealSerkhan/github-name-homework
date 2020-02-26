@@ -25,13 +25,13 @@ public class Homework2 {
 
         while (a != x || b != y) {
 
-            arr[x][y] = "*";
+            arr[x-1][y-1] = "*";
             For_loop();
             System.out.println("Again!");
             x = rs.nextInt();
             y = rs.nextInt();
         }
-        arr[x][y]="x";
+        arr[x-1][y-1]="x";
         System.out.println("you have won the game!");
 
         For_loop();
