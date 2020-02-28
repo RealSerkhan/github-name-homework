@@ -2,17 +2,17 @@ package hw04;
 
 public class Main {
     public static void main(String[] args) {
-        Pet pet=new Pet("cat",1);
-        String[] habits={"sleeping","eating"};
-        Pet max=new Pet("Dog","Max",2,20,habits);
-        Human Dad=new Human("Fazil","Serkhanbeyov",1971);
-        Human Mom=new Human();
-        Human Hilal=new Human("Hilal","Serkhanbeyov",1997,Mom,Dad);
-        String[] b={"Ders oxumaq","Oyun oynamaq"};
+        Pet pet = new Pet("cat", 1);
+        String[] habits = {"sleeping", "eating"};
+        Pet max = new Pet("Dog", "Max", 2, 20, habits);
+        Human Dad = new Human("Fazil", "Serkhanbeyov", 1971);
+        Human Mom = new Human();
+        Human Hilal = new Human("Hilal", "Serkhanbeyov", 1997, Mom, Dad);
+        String[] b = {"Ders oxumaq", "Oyun oynamaq"};
 
-        Human Real=new Human("Real","Serkhanbeyli",2000,80,max,Mom,Dad,b);
-        String[] a={"Running","hawling"};
-        Pet brotherdog=new Pet("Dog","Phin",3,90,a);
+        Human Real = new Human("Real", "Serkhanbeyli", 2000, 80, max, Mom, Dad, b);
+        String[] a = {"Running", "hawling"};
+        Pet brotherdog = new Pet("Dog", "Phin", 3, 90, a);
 
 //        Mom.name="mom";
 //        Mom.surname="Serkhanbeyov";
@@ -37,7 +37,7 @@ public class Main {
         System.out.println(Real.toString());
         Real.greetPet();
         System.out.println(max.toString());
-                max.eat();
+        max.eat();
         brotherdog.respond();
         brotherdog.foul();
     }

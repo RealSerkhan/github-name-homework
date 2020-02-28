@@ -26,7 +26,7 @@ public class Homework3 {
 
                 String gun=null;
                 gun=rs.nextLine();
-                String a=gun.toLowerCase();
+                String a=gun.toLowerCase().trim();
 
                 int b=0;
 
@@ -37,7 +37,6 @@ public class Homework3 {
                 }
 
                 boolean c=false;
-
                 while(c==false){
                     c=a.equals(arr[b][0]);
                     b++;
