@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class Family {
     private Human mother;
     private Human father;
-    private ArrayList<Human> children = new ArrayList<Human>();
+    //    private ArrayList<Human> children = new ArrayList<Human>();
+    Human[] children = new Human[0];
 
     private Pet pet;
 
@@ -16,9 +17,28 @@ public class Family {
     }
 
     public void addChild(Human child) {
-        this.children.add(child);
-        child.setFamily(this);
+        int a = children.length;
 
+        Human[] child1 = new Human[a + 1];
+//        for (int i = 0; i < (a+1); i++) {
+//            child1[i] = children[i];
+//        }
+        child1[a]=child;
+        this.children = child1;
+        child.setFamily(this);
+    }
+
+    public void deleteChild(Human child) {
+//        this.children.remove(child);
+        int a = children.length;
+        Human[] child1=new Human[a-1];
+        for (int i = 0; i <a-1 ; i++) {
+            if (children[i]!=child){
+                child1[i]=children[i];
+            }
+            children=child1;
+        }
+        child.deleteFromFamily();
 
     }
 
@@ -46,20 +66,13 @@ public class Family {
         this.pet = pet;
     }
 
-    public ArrayList<Human> getChildren() {
+    public Human[] getChildren() {
         return this.children;
     }
 
 
-    public void deleteChild(Human child) {
-        this.children.remove(child);
-        child.deleteFromFamily();
-
-    }
-
-
     public int countFamily() {
-        return 2 + children.size();
+        return 2 + children.length;
     }
 
     @Override

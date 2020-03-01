@@ -4,36 +4,38 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        String[] Findiqhabits = {"Sleeping", "playing", "Eating", "Meowing", "Hiding"};
-        Human FazilSerkhan = new Human("Fazil", "Serkhan", 1971);
-        Pet realCat = new Pet("Cat", "Findiq", 1, 90, Findiqhabits);
-        Human MomSerkhan = new Human("Mom", "Serkhan", 1971);
+        String[] findiqhabits = {"Sleeping", "playing", "Eating", "Meowing", "Hiding"};
+        Human fazilSerkhan = new Human("Fazil", "Serkhan", 1971);
+        Pet realCat = new Pet("Cat", "Findiq", 1, 90, findiqhabits);
+        Human momSerkhan = new Human("Mom", "Serkhan", 1971);
 
-        Family serkhans = new Family(FazilSerkhan, MomSerkhan);
+        Family serkhans = new Family(fazilSerkhan, momSerkhan);
 
-        Pet HilalDog = new Pet("Dog", "Max");
-        Human HilalSerkhan = new Human("Hilal", "Serkhan", 1997);
-        Human ShikaliSerkhan = new Human("Shikali", "Serkhan", 1995);
+        Pet hilalDog = new Pet("Dog", "Max");
+        Human hilalSerkhan = new Human("Hilal", "Serkhan", 1997);
+        Human shikaliSerkhan = new Human("Shikali", "Serkhan", 1995);
 
-        Pet OsmanDOg = new Pet();
+        Pet osmanDOg = new Pet();
         String[][] osmanschedule = {{"Wednesday", "Reading books"}, {"Friday", "Feeling good"}};
-        Human OsmanSerkhan = new Human("Osman", "Serkhan", serkhans, 2000, 88, osmanschedule, OsmanDOg);
-        System.out.println(HilalSerkhan.getFamily());
-        serkhans.addChild(HilalSerkhan);
-        serkhans.addChild(ShikaliSerkhan);
-        serkhans.addChild(OsmanSerkhan);
+        Human osmanSerkhan = new Human("Osman", "Serkhan", serkhans, 2000, 88, osmanschedule, osmanDOg);
+        Human noone=new Human("Nobody","NUll",1900);
+        System.out.println(hilalSerkhan.getFamily());
+        serkhans.addChild(hilalSerkhan);
+        serkhans.addChild(shikaliSerkhan);
+        serkhans.addChild(osmanSerkhan);
+        serkhans.addChild(noone);
         System.out.println(serkhans.countFamily());
-        serkhans.deleteChild(HilalSerkhan);
+        serkhans.deleteChild(hilalSerkhan);
         System.out.println(serkhans.countFamily());
-        System.out.println(HilalSerkhan.getFamily());
+        System.out.println(hilalSerkhan.getFamily());
         realCat.setSpecies("Cat");
-        OsmanDOg.setNickname("Rune");
-        OsmanDOg.setTrickLevel(79);
-        OsmanDOg.setAge(2);
-        OsmanDOg.setHabits(new String[]{"Sleeping", "Eating", "Hawling"});
-        System.out.println(OsmanSerkhan.toString());
-        OsmanSerkhan.greetPet();
-        OsmanSerkhan.describePet();
+        osmanDOg.setNickname("Rune");
+        osmanDOg.setTrickLevel(79);
+        osmanDOg.setAge(2);
+        osmanDOg.setHabits(new String[]{"Sleeping", "Eating", "Hawling"});
+        System.out.println(osmanSerkhan.toString());
+        osmanSerkhan.greetPet();
+        osmanSerkhan.describePet();
         System.out.println(realCat.toString());
         realCat.respond();
         realCat.eat();
