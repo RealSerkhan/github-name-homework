@@ -1,4 +1,4 @@
-package hw06;
+package hw07;
 
 
 public class Family {
