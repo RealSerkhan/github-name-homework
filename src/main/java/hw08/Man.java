@@ -1,7 +1,7 @@
-package hw07;
+package hw08;
 
 public class Man extends Human {
-
+    private Pet pet;
     public Man() {
         super();
     }
@@ -19,6 +19,6 @@ public class Man extends Human {
 
     @Override
     public void greetPet(){
-        System.out.printf("Hello, %s.\n", pet.getNickname());
+        System.out.printf("Hello, %s.\n", this.pet.getNickname());
     }
 }
