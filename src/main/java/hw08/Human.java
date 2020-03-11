@@ -1,16 +1,20 @@
 package hw08;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 public abstract class Human {
     private String name;
     private String surname;
     private int dateOfBirth;
     private int IQ;
-    private String schedule;
+    private Map<DayofWeek, ArrayList<String>> schedule;
     private Family family;
     protected Pet pet;
 
-    public Human(String name, String surname, Family family, int dateOfBirth, int IQ, String schedule, Pet pet) {
+    public Human(String name, String surname, Family family, int dateOfBirth, int IQ, Map<DayofWeek, ArrayList<String>>schedule, Pet pet) {
         this.name = name;
         this.surname = surname;
         this.family = family;
@@ -66,11 +70,11 @@ public abstract class Human {
         this.IQ = IQ;
     }
 
-    public String getSchedule() {
+    public Map<DayofWeek, ArrayList<String>> getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(String schedule) {
+    public void setSchedule(Map<DayofWeek, ArrayList<String>> schedule) {
         this.schedule = schedule;
     }
 

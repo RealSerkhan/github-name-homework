@@ -1,10 +1,14 @@
 package hw08;
 
 public enum DayofWeek {
-    Monday("Education"),Tuesday("Again"), Wednesday("Reading"), Thursday("Going"), Friday("Cuma"), Saturday("Resting"), Sunday("getting ready");
+    Monday,Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
     String schedule;
 
     DayofWeek(String schedule) {
         this.schedule = schedule;
+    }
+
+    DayofWeek() {
+
     }
 }

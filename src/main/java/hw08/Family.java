@@ -1,13 +1,14 @@
 package hw08;
 
 
+import java.util.ArrayList;
+import java.util.Set;
+
 public class Family {
     private Human mother;
     private Human father;
-    //    private ArrayList<Human> children = new ArrayList<Human>();
-    Human[] children = new Human[0];
-
-    private Pet pet;
+    protected Set<Pet> pet;
+    private ArrayList<Human> children = new ArrayList<Human>();
 
     public Family(Human father, Human mother) {
         this.father = father;
@@ -16,48 +17,19 @@ public class Family {
     }
 
     public void addChild(Human child) {
-        int a = children.length;
-
-        Human[] child1 = new Human[a + 1];
-//        for (int i = 0; i < (a+1); i++) {
-//            child1[i] = children[i];
-//        }
-        child1[a] = child;
-        this.children = child1;
+        this.children.add(child);
         child.setFamily(this);
     }
 
     public void deleteChild(Human child) {
-//        this.children.remove(child);
-        try {
-            int a = children.length;
-            Human[] child1 = new Human[a - 1];
-            for (int i = 0; i < a - 1; i++) {
-                if (!child.equals(children[i])) {
-                    child1[i] = children[i];
-                }
-
-
-            }
-            children = child1;
-            child.deleteFromFamily();
-        } catch (Exception e) {
-            System.out.println(child.getName() + " is not in Family");
-        }
+        this.children.remove(child);
+        child.deleteFromFamily();
 
 
     }
 
     public void deletechildIndex(int index) {
-        int a = children.length;
-        Human[] child1 = new Human[a - 1];
-        for (int i = 0; i < a - 1; i++) {
-            if (index != i) {
-                child1[i] = children[i];
-            }
-            children = child1;
-
-        }
+        this.children.remove(children.get(index));
 
     }
 
@@ -77,21 +49,20 @@ public class Family {
         this.father = father;
     }
 
-    public Pet getPet() {
+    public Set<Pet> getPet() {
         return pet;
     }
 
     public void setPet(Pet pet) {
-        this.pet = pet;
+        this.pet = (Set<Pet>) pet;
     }
 
-    public Human[] getChildren() {
-        return this.children;
+    public Family(ArrayList<Human> children) {
+        this.children = children;
     }
-
 
     public int countFamily() {
-        return 2 + children.length;
+        return 2 + children.size();
     }
 
     @Override

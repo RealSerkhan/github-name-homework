@@ -1,20 +1,21 @@
 package hw08;
 
-import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class Pet {
     private Species species;
     private String nickname;
     private int age;
     private int trickLevel;
-    private String[] habits;
+    private HashSet<String> habits=new HashSet<>();
 
     public Pet(Species species, String nickname) {
         this.species = species;
         this.nickname = nickname;
     }
 
-    public Pet(Species species, String nickname, int age, int trickLevel, String[] habits) {
+    public Pet(Species species, String nickname, int age, int trickLevel, HashSet<String> habits) {
         this.species = species;
         this.nickname = nickname;
         this.age = age;
@@ -54,11 +55,11 @@ public abstract class Pet {
         this.trickLevel = trickLevel;
     }
 
-    public String[] getHabits() {
+    public Set<String> getHabits() {
         return habits;
     }
 
-    public void setHabits(String[] habits) {
+    public void setHabits(HashSet<String> habits) {
         this.habits = habits;
     }
 
@@ -74,7 +75,7 @@ public abstract class Pet {
 
     public String toString() {
         return species + "{nickname= " + this.nickname + ", age=" + this.age + ", trickLevel=" + this.trickLevel +
-                ", habits=" + Arrays.toString(this.habits) + "}";
+                ", habits=" + habits.toString() + "}";
     }
 
     @Override

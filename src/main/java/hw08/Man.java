@@ -1,7 +1,10 @@
 package hw08;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 public class Man extends Human {
-    private Pet pet;
+
     public Man() {
         super();
     }
@@ -10,7 +13,7 @@ public class Man extends Human {
         super(name,surname,dateOfBirth);
     }
 
-    public Man(String name, String surname, Family family, int dateOfBirth, int IQ, String schedule, Pet pet) {
+    public Man(String name, String surname, Family family, int dateOfBirth, int IQ, Map<DayofWeek, ArrayList<String>> schedule, Pet pet) {
         super(name, surname, family, dateOfBirth, IQ, schedule, pet);
     }
     public void repairCar(){
