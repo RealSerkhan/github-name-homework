@@ -8,7 +8,7 @@ public abstract class Pet {
     private String nickname;
     private int age;
     private int trickLevel;
-    private HashSet<String> habits=new HashSet<>();
+    private HashSet<String> habits = new HashSet<>();
 
     public Pet(Species species, String nickname) {
         this.species = species;

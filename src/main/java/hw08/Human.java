@@ -2,7 +2,6 @@ package hw08;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Human {
@@ -14,7 +13,7 @@ public abstract class Human {
     private Family family;
     protected Pet pet;
 
-    public Human(String name, String surname, Family family, int dateOfBirth, int IQ, Map<DayofWeek, ArrayList<String>>schedule, Pet pet) {
+    public Human(String name, String surname, Family family, int dateOfBirth, int IQ, Map<DayofWeek, ArrayList<String>> schedule, Pet pet) {
         this.name = name;
         this.surname = surname;
         this.family = family;
