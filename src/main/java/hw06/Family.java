@@ -1,6 +1,9 @@
 package hw06;
 
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Family {
     private Human mother;
     private Human father;
@@ -48,16 +51,15 @@ public class Family {
 
     }
 
-    public void deletechildIndex(int index) {
+    public void deleteChild(int index) {
         int a = children.length;
         Human[] child1 = new Human[a - 1];
         for (int i = 0; i < a - 1; i++) {
             if (index != i) {
                 child1[i] = children[i];
             }
-            children = child1;
-
         }
+        children = child1;
 
     }
 
@@ -101,21 +103,20 @@ public class Family {
     }
 
     @Override
-    public int hashCode() {
-        int result = 19;
-        result = result * 13 + this.father.hashCode();
-        result = result * 13 + this.mother.hashCode();
-        result = result * 13 + this.children.hashCode();
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Family)) return false;
+        Family family = (Family) o;
+        return mother.equals(family.mother) &&
+                father.equals(family.father) &&
+                Arrays.equals(children, family.children) &&
+                pet.equals(family.pet);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (!(obj instanceof Family)) return false;
-        Family that = (Family) obj;
-        return this.mother.equals(that.mother) &&
-                this.father.equals(that.father) &&
-                this.children.equals(that.children);
+    public int hashCode() {
+        int result = Objects.hash(mother, father, pet);
+        result = 31 * result + Arrays.hashCode(children);
+        return result;
     }
 }

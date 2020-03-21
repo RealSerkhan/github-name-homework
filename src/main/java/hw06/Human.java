@@ -1,7 +1,6 @@
 package hw06;
 
 
-
 import java.util.Arrays;
 
 public class Human {
@@ -9,7 +8,7 @@ public class Human {
     private String surname;
     private int dateOfBirth;
     private int IQ;
-    private String schedule;
+    private String schedule[][];
     private Family family;
     private Pet pet;
 
@@ -43,10 +42,10 @@ public class Human {
     public void setIqLevel(int IQ) {
         this.IQ = IQ;
     }
-    public String getSchedule() {
+    public String[][] getSchedule() {
         return schedule;
     }
-    public void setSchedule(String schedule) {
+    public void setSchedule(String[][] schedule) {
         this.schedule = schedule;
     }
     public Pet getPet() {
@@ -69,7 +68,7 @@ public class Human {
         this.setDateOfBirth(dateOfBirth);
     }
 
-    public Human(String name, String surname, Family family, int dateOfBirth, int IQ, String schedule, Pet pet) {
+    public Human(String name, String surname, Family family, int dateOfBirth, int IQ, String schedule[][], Pet pet) {
         this.name = name;
         this.surname = surname;
         this.family = family;
@@ -89,7 +88,7 @@ public class Human {
 
     public String toString() {
         return String.format("Human{name='%s', surname='%s', year=%d, IQ=%d, schedule= %s",
-                this.getName(), this.getSurname(),this.getDateOfBirth(), this.getIqLevel(), this.schedule);
+                this.getName(), this.getSurname(),this.getDateOfBirth(), this.getIqLevel(), Arrays.deepToString(this.schedule));
     }
 
     @Override

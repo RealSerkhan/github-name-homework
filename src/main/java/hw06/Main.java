@@ -8,24 +8,23 @@ public class Main {
         Human fazilSerkhan = new Human("Fazil", "Serkhan", 1971);
         Pet realCat = new Pet(Species.Cat, "Findiq", 1, 90, findiqhabits);
         Human momSerkhan = new Human("Mom", "Serkhan", 1971);
-
         Family serkhans = new Family(fazilSerkhan, momSerkhan);
-
         Pet hilalDog = new Pet(Species.Dog, "Max");
         Human hilalSerkhan = new Human("Hilal", "Serkhan", 1997);
         Human shikaliSerkhan = new Human("Shikali", "Serkhan", 1995);
-
         Pet osmanDOg = new Pet();
-//        String[][] osmanschedule = {{"Wednesday", "Reading books"}, {"Friday", "Feeling good"}};
-        Human osmanSerkhan = new Human("Osman", "Serkhan", serkhans, 2000, 88, DayofWeek.Monday.schedule, osmanDOg);
+        String[][] schedule= {{DayofWeek.Monday.name(), "education"},{DayofWeek.Tuesday.name(),"Nothing"}};
+        Human osmanSerkhan = new Human("Osman", "Serkhan", serkhans, 2000, 88, schedule, osmanDOg);
         Human noone=new Human("Nobody","NUll",1900);
         System.out.println(hilalSerkhan.getFamily());
         serkhans.addChild(hilalSerkhan);
         serkhans.addChild(shikaliSerkhan);
         serkhans.addChild(osmanSerkhan);
         serkhans.addChild(noone);
+        serkhans.deleteChild(2);
         System.out.println(serkhans.countFamily());
         serkhans.deleteChild(hilalSerkhan);
+        serkhans.deleteChild(3);
         System.out.println(serkhans.countFamily());
         System.out.println(hilalSerkhan.getFamily());
         realCat.setSpecies(Species.Cat);
