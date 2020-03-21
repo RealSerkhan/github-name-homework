@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
         String[] findiqhabits = {"Sleeping", "playing", "Eating", "Meowing", "Hiding"};
         Human fazilSerkhan = new Man("Fazil", "Serkhan", 1971);
-        Pet realCat = new DomesticCat(Species.DomesticCat, "Findiq", 1, 90, findiqhabits);
+        Pet realCat = new DomesticCat( "Findiq", 1, 90, findiqhabits);
         Human momSerkhan = new Woman("Mom", "Serkhan", 1971);
         Family serkhans = new Family(fazilSerkhan, momSerkhan);
-        Pet hilalDog = new Dog(Species.Dog, "Max");
+        Pet hilalDog = new Dog( "Max");
         Human hilalSerkhan = new Man("Hilal", "Serkhan", 1997);
         Human shikaliSerkhan = new Man("Shikali", "Serkhan", 1995);
         Pet osmanDOg = new Dog();

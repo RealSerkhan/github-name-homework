@@ -1,12 +1,14 @@
 package hw07;
 
 public class Fish extends Pet {
-    public Fish(Species species, String nickname, int age, int trickLevel, String[] habits) {
-        super(species, nickname, age, trickLevel, habits);
+    private Species species;
+    public Fish( String nickname, int age, int trickLevel, String[] habits) {
+        super( nickname, age, trickLevel, habits);
+        speciess=species.Fish.name();
     }
 
-    public Fish(Species species, String nickname) {
-        super(species, nickname);
+    public Fish( String nickname) {
+        super( nickname);
     }
 
     @Override

@@ -1,12 +1,15 @@
 package hw07;
 
 public class Dog extends Pet {
-    public Dog(Species species, String nickname, int age, int trickLevel, String[] habits) {
-        super(species, nickname, age, trickLevel, habits);
+    private Species species;
+    public Dog( String nickname, int age, int trickLevel, String[] habits) {
+        super( nickname, age, trickLevel, habits);
+        speciess=species.Dog.name();
     }
 
-    public Dog(Species species, String nickname) {
-        super(species, nickname);
+    public Dog( String nickname) {
+        super( nickname);
+
     }
 
     public Dog() {

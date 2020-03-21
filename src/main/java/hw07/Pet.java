@@ -4,18 +4,17 @@ import java.util.Arrays;
 
 public abstract class Pet {
     private Species species;
+    String speciess;
     private String nickname;
     private int age;
     private int trickLevel;
     private String[] habits;
 
-    public Pet(Species species, String nickname) {
-        this.species = species;
+    public Pet( String nickname) {
         this.nickname = nickname;
     }
 
-    public Pet(Species species, String nickname, int age, int trickLevel, String[] habits) {
-        this.species = species;
+    public Pet( String nickname, int age, int trickLevel, String[] habits) {
         this.nickname = nickname;
         this.age = age;
         this.trickLevel = trickLevel;
@@ -73,7 +72,7 @@ public abstract class Pet {
     public abstract void foul();
 
     public String toString() {
-        return species + "{nickname= " + this.nickname + ", age=" + this.age + ", trickLevel=" + this.trickLevel +
+        return speciess + "{nickname= " + this.nickname + ", age=" + this.age + ", trickLevel=" + this.trickLevel +
                 ", habits=" + Arrays.toString(this.habits) + "}";
     }
 

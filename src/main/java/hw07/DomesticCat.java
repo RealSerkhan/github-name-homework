@@ -1,12 +1,15 @@
 package hw07;
 
 public class DomesticCat extends Pet {
-    public DomesticCat(Species species, String nickname, int age, int trickLevel, String[] habits) {
-        super(species, nickname, age, trickLevel, habits);
+    private Species species;
+    public DomesticCat(String nickname, int age, int trickLevel, String[] habits) {
+        super( nickname, age, trickLevel, habits);
+        speciess=species.DomesticCat.name();
     }
 
-    public DomesticCat(Species species, String nickname) {
-        super(species, nickname);
+    public DomesticCat( String nickname) {
+        super( nickname);
+
     }
 
     @Override

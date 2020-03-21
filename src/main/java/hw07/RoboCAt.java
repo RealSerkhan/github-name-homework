@@ -1,12 +1,14 @@
 package hw07;
 
 public class RoboCAt extends Pet {
-    public RoboCAt(Species species, String nickname, int age, int trickLevel, String[] habits) {
-        super(species, nickname, age, trickLevel, habits);
+    private Species species;
+    public RoboCAt(String nickname, int age, int trickLevel, String[] habits) {
+        super( nickname, age, trickLevel, habits);
+        speciess=species.RoboCat.name();
     }
 
-    public RoboCAt(Species species, String nickname) {
-        super(species, nickname);
+    public RoboCAt( String nickname) {
+        super( nickname);
     }
 
     @Override
