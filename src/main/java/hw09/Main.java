@@ -1,8 +1,8 @@
 package hw09;
 
-import hw09.Animal.*;
-import hw09.Family.Family;
-import hw09.Family.FamilyController;
+import hw09.Pets.*;
+import hw09.DAO.Family;
+import hw09.DAO.FamilyController;
 import hw09.Humans.Human;
 import hw09.Humans.Man;
 import hw09.Humans.Woman;

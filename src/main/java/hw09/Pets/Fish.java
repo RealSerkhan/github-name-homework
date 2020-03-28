@@ -1,20 +1,22 @@
-package hw09.Animal;
+package hw09.Pets;
 
 import java.util.HashSet;
 
-public class RoboCat extends Pet {
-  public RoboCat() {
+public class Fish extends Pet {
+
+  public Fish() {
     super();
-    this.species = Species.Robocat;
-  }
-  public RoboCat(String nickname) {
-    super(nickname);
-    this.species = Species.Robocat;
+    this.species = Species.Fish;
   }
 
-  public RoboCat(String nickname, int age, int trickLevel, HashSet<String> habits) {
+  public Fish(String nickname) {
+    super(nickname);
+    this.species = Species.Fish;
+  }
+
+  public Fish(String nickname, int age, int trickLevel, HashSet<String> habits) {
     super(nickname, age, trickLevel, habits);
-    this.species = Species.Robocat;
+    this.species = Species.Fish;
   }
 
   @Override

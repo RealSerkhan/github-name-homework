@@ -1,4 +1,4 @@
-package hw09.Animal;
+package hw09.Pets;
 
 import java.util.HashSet;
 

@@ -1,6 +1,6 @@
-package hw09.Family;
+package hw09.DAO;
 
-import hw09.Animal.Pet;
+import hw09.Pets.Pet;
 import hw09.Humans.Human;
 
 public class FamilyController {

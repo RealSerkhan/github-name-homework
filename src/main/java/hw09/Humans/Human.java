@@ -1,7 +1,7 @@
 package hw09.Humans;
 
 import hw09.DayOfWeek;
-import hw09.Family.Family;
+import hw09.DAO.Family;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

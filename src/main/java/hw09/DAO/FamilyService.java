@@ -1,6 +1,6 @@
-package hw09.Family;
+package hw09.DAO;
 
-import hw09.Animal.Pet;
+import hw09.Pets.Pet;
 import hw09.Humans.Human;
 import hw09.Humans.MasculineName;
 import hw09.Humans.Man;
@@ -8,7 +8,6 @@ import hw09.Humans.Woman;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
